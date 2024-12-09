@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div id="backdrop"></div>
+<div id="container">
+  <div class="logo_area">
+    <a href="">
+      <h1 class="logo">Flixify</h1>
+    </a>
+  </div>
+
+  <div class="centred">
+    <div class="register_box">
+      <form method="POST" action="{% url 'register' %}">
+        {% csrf_token %}
+        <h2 class="heading">Sign Up</h2>
+        <div class="form-group inputbox">
+          <label>Username: <span class="text-danger">*</span></label>
+          {{ form.username}}
+          {% if form.username.errors %}
+          <div class="text-danger">{{ form.username.errors }}</div>
+          {% endif %}
+          <div class="username-error text-danger"></div>
+        </div>
+        <div class="form-group inputbox">
+          <label>Email: <span class="text-danger">*</span></label>
+          {{ form.email}}
+          {% if form.email.errors %}
+          <div class="text-danger">{{ form.email.errors }}</div>
+          {% endif %}
+          <div class="email-error text-danger"></div>
+        </div>
+        <div class="form-group inputbox">
+          <label>Password: <span class="text-danger">*</span></label>
+          {{ form.password }}
+          {% if form.password.errors %}
+          <div class="text-danger">{{ form.password.errors }}</div>
+          {% endif %}
+          <div class="password-error text-danger"></div>
+        </div>
+        <div class="form-group inputbox">
+          <label>Confirm Password: <span class="text-danger">*</span></label>
+          {{ form.confirm_password }}
+          {% if form.confirm_password.errors %}
+          <div class="text-danger">{{ form.confirm_password.errors }}</div>
+          {% endif %}
+          <div class="confirm-password-error text-danger"></div>
+        </div>
+        <div class="">
+          <button type="submit" class="sign_up">Sign Up</button>
+        </div>
+        <div class="text-center mt-3">
+          <a href="{% url 'login' %}" class="">Already have an account? Log in</a>
+        </div>
+    </div>
+    </form>
+  </div>
+
+</div>
+
+{% endblock %}

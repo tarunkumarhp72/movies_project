@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="backdrop"></div>
+<div id="container">
+  <div class="logo_area">
+    <a href="">
+      <h1 class="logo">Flixify</h1>
+    </a>
+  </div>
+
+  <div class="centred">
+    <div class="box">
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <h2 class="heading">Sign In</h2>
+        <label>Username:</label>
+        <input type="text" class="form_input" id="username" name="username" placeholder="Username">
+        <div id="feedback"></div>
+        <label>Password:</label>
+        <input type="password" class="form_input" id="password" name="password" placeholder="Password">
+        <div id="feedback2"></div>
+
+        <div class="btn">
+          <button type="submit" class="sign_in">Sign In</button>
+        </div>
+      </form>
+      <div class="flex">
+        <a class="left" href="">Need help?</a>
+      </div>
+      <div class="more">
+        <span class="new">New to Flixify? <a class="sign" href="{% url 'register' %}">Sign up now.</a></span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

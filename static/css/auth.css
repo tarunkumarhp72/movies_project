@@ -1,0 +1,283 @@
+* {
+  box-sizing: revert;
+}
+
+:root {
+  color: white;
+  width: 100%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#backdrop {
+  width: 100%;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  right: o;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.7)), url(https://i.ibb.co/vXqDmnh/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  width: 9em;
+}
+
+#container {
+  position: relative;
+}
+
+.logo_area {
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+.box {
+  background-color: black;
+  opacity: 0.75;
+  padding: 60px;
+  width: 26em;
+  height: 25em;
+  border-radius: 10px;
+}
+
+.register_box {
+  background-color: black;
+  opacity: 0.75;
+  padding: 60px;
+  width: 26em;
+  height: 36em;
+  border-radius: 10px;
+}
+
+
+.form_input {
+  display: block;
+  margin-bottom: 1em;
+  border: none;
+  width: 90%;
+  height: 0.6em;
+  padding: 20px;
+  font-size: 15px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 5px;
+  color: white;
+
+}
+
+.form_input:focus,
+.sign_in:focus {
+  outline: none;
+}
+
+#feedback,
+#feedback2 {
+  color: #e50914;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.centred {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 1em; */
+}
+
+h2 {
+  font-size: 32px;
+  margin-top: -0.5em;
+  color: white;
+}
+
+.btn {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+  margin-left: 4px;
+  width: 100%;
+  border: none;
+  padding: 0px
+}
+
+.sign_in {
+  width: 100%;
+  background-color: #e50914;
+  height: 2em;
+  padding: 33px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.sign_up {
+  width: 100%;
+  background-color: #e50914;
+  height: 2em;
+  padding: 33px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 50px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.left {
+  float: right;
+}
+
+a {
+  color: lightgray;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.more {
+  margin-top: 4em;
+  color: rgb(141, 141, 141);
+}
+
+.blue {
+  color: rgb(115, 115, 255);
+}
+
+.new {
+  font-size: 17px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  margin-left: -1em;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-top: 5%;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+}
+
+.one {
+  display: flex;
+  flex-direction: column;
+  margin: 2em;
+  margin-top: 1em;
+  line-height: 2em;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 550px) {
+  #backdrop {
+    background: black;
+  }
+
+  .box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .btn {
+    margin-left: 0;
+  }
+
+  .sign_in {
+    width: 100%;
+  }
+
+  .more {
+    margin-top: 5em;
+  }
+
+  footer {
+    margin-top: 0;
+    padding: 30px;
+
+  }
+
+  .second {
+    flex-direction: column;
+  }
+
+  .one,
+  .first {
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width: 6em;
+  }
+
+  .logo_area {
+    margin-left: 1em;
+  }
+}
+
+
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: white;
+}
+
+.inputbox label {
+  color: white;
+
+}
+
+.box label {
+  color: white;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.username-error.text-danger,
+.email-error.text-danger,
+.password-error.text-danger,
+.confirm-password-error.text-danger {
+  position: relative;
+  top: -14px;
+  font-size: 13px;
+}
