@@ -1,2 +1,2 @@
-# movies_rental_project
-Django Movie Rental Project
+# movies_project
+Django Movies Project
