@@ -15,10 +15,10 @@ class CustomUserCreationForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
         # Adding custom classes to the form fields
-        self.fields['username'].widget.attrs.update({'class': 'form-control form_input','placeholder': 'Username'})
+        self.fields['username'].widget.attrs.update({'class': 'form-control form_input','placeholder': 'username'})
         self.fields['email'].widget.attrs.update({'class': 'form-control form_input','placeholder':'email'})
-        self.fields['password'].widget.attrs.update({'class': 'form-control form_input','placeholder': 'Password'})
-        self.fields['confirm_password'].widget.attrs.update({'class': 'form-control form_input','placeholder':'confirm Password'})
+        self.fields['password'].widget.attrs.update({'class': 'form-control form_input','placeholder': 'password'})
+        self.fields['confirm_password'].widget.attrs.update({'class': 'form-control form_input','placeholder':'confirm password'})
 
     def clean(self):
         cleaned_data = super().clean()

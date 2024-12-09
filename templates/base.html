@@ -22,6 +22,7 @@
   {% load static %}
   <!-- custom css -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
   <!-- leaflet css -->
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -29,8 +30,35 @@
 </head>
 
 <body class="{{ page_class }}">
-
-
+  <div id="backdrop"></div> 
+  <div id="container">
+    <div class="logo_area">
+      <a href="">
+        <h1 class="logo">Flixify</h1>
+      </a>
+    </div>
+  
+    <!-- HEADER -->
+    <header>
+      <div class="netflixLogo">
+        <a id="logo" href="#home"><img src="../static/logo.webp" alt="Logo Image"></a>
+      </div>      
+      <nav class="main-nav">                
+        <a href="#home">Home</a>
+        <a href="#tvShows">TV Shows</a>
+        <a href="#movies">Movies</a>
+        <a href="#originals">Originals</a>
+        <a href="#">Recently Added</a>
+      
+      </nav>
+      <nav class="sub-nav">
+        <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+        <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
+        <a href="#">Account</a>        
+      </nav>      
+    </header>
+  </div>
+    <!-- END OF HEADER -->
   {%block content%} {% endblock %}
 
   <footer id="footer">
@@ -54,6 +82,8 @@
       </div>
     </div>
   </footer>
+</div>
+
 </body>
 
 </html>
